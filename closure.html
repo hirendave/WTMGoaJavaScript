@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<script type="text/javascript" language="javascript">
+			/*function outerFunc() {
+			  let outerVar = 'I am defined in outerFunc!';
+
+			  function innerFunc() {
+			  	console.log(outerVar);
+			  }
+
+			  innerFunc();
+			}
+
+			outerFunc();*/
+
+			var globalVariable = 0;
+
+			function func() {
+			  const innerVariable = 1;
+			  console.log(globalVariable);
+
+			  function innerOfFunc() {
+			    const innerVariableTwo = 2;
+			    console.log(innerVariable, globalVariable);
+
+			    function innerOfInnerOfFunc() {
+			      console.log(innerVariableTwo, innerVariable, globalVariable);
+			    }
+
+			    innerOfInnerOfFunc();
+			  }
+			  innerOfFunc();
+			}
+
+			func();
+		</script>
+	</head>
+</html>

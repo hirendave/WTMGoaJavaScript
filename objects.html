@@ -1,0 +1,53 @@
+<html>
+	<head>
+		<script type="text/javascript" language="javascript">
+			var obj = {}; //represent an empty object.
+
+			var obj = {
+				name: 'John Smith',
+				phone: '123456789',
+				myFunction :  function(str){
+					alert(str);
+				},
+				nestedObj: {
+					nestedProp : "nestedProp value"
+				}
+			}; //represent object with two properties.
+			console.log(obj.name + " / " + obj.phone);
+			alert(obj.nestedObj.nestedProp);
+			var name = obj.name; //name will have value 'John Smith'
+
+			alert(name);
+
+			var email = obj.email; //email will have value undefiend.
+
+			alert(email);
+
+			var phone = obj['phone']; //phone will have value 123456789
+
+			alert(phone);
+
+			obj.myFunction("My String");
+
+			obj.name = 'Mark Smith';
+			obj['name'] = 'Mark Smith';
+
+			name = obj.name; //name will have value 'John Smith'
+
+			alert(name);
+
+			delete obj.name;
+
+			name = obj.name;
+
+			alert(name);
+
+			obj.name = 'Mark Smith';
+
+			alert(typeof obj.name);
+
+			console.log(obj.toString());
+
+		</script>
+	</head>
+</html>

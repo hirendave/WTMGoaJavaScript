@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<script type="text/javascript" language="javascript">
+			function setValues(){
+				document.getElementById('container').innerHTML = "Div Inner Content";
+
+				var firstDiv = document.querySelector('div');
+				firstDiv.style.color = 'red';
+
+				var paragraphs = document.querySelectorAll('p');
+				for(var p of paragraphs)
+  					p.style.color = 'blue';
+
+				var btn = document.querySelector('button');
+				btn.onclick = clickHandler
+
+				//btn.addEventListener('click', clickHandler);
+
+				var childDiv = document.createElement('div');
+				childDiv.innerHTML = "childDiv";
+				firstDiv.appendChild(childDiv)
+			}
+
+			function clickHandler(){
+				alert('Button Clicked');
+			}
+		</script>
+	</head>
+	<body onload="setValues()">
+		<div id="container">
+		</div>
+		<div id="secondContainer">
+			Hello
+		</div>
+		<div>
+			One More Container
+		</div>
+		<p>Paragraph one</p>
+		<p>Paragraph two</p>
+
+		<button>Click Me</button>
+	</body>
+</html>

@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<script type="text/javascript" language="javascript">
+
+		var base = function() {
+			this.baseproperty = 'Base Property';
+			this.overridefunction = function(){
+				alert('base function');
+			}
+		}
+
+		var derived = function(){
+			this.overridefunction = function(){
+				alert('derived function');
+			}
+		}
+
+		var b = new base();
+
+		derived.prototype =  b;
+
+		var d = new derived();
+
+		d.overridefunction(); // shows alert ' derived function '
+		var property = d.baseproperty; //stores value 'Base Property' in variable
+
+		//alert(property);
+
+		//b.myMethod();
+
+		base.prototype.myMethod = function(){
+			alert('This is my method');
+		}
+
+		b = new base();
+
+		b.myMethod();
+
+		</script>
+	</head>
+</html>

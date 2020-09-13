@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<script type="text/javascript" language="javascript">
+			var num1Int = 1300;
+
+			if(num1Int >= 1 && num1Int <= 4){
+				alert('between 1 & 4');
+			}else if(num1Int >= 4 && num1Int <= 10){
+				alert('between 4 & 10');
+			}else{
+				alert('greater than 10');
+			}
+
+			switch(num1Int){
+				case 1 : alert("value is 1");break;
+				case 2 : alert("value is 2");break;
+				case 3 : alert("value is 3");break; 
+				default : alert("value greater than 3");break; 
+			}
+
+			for(var i = 0 ;i < 10;i++){
+				if( i == 5){
+					break;
+				}
+				console.log(i);
+			}
+
+			var arr = [1,2,3,4,5];
+			for(value in arr){
+				console.log(value);
+			}
+
+			var i = 0;
+			while(i < 10){
+				console.log(i);
+				//i++;
+			}
+		</script>
+	</head>
+</html>
